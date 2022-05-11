@@ -316,6 +316,8 @@
 /* Begin PBXFileReference section */
 		067F645962D6CE76D06E48B3 /* Pods-CRNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRNA.release.xcconfig"; path = "Target Support Files/Pods-CRNA/Pods-CRNA.release.xcconfig"; sourceTree = "<group>"; };
 		45AABECDCD2467A1EC36A455 /* Pods-CRNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRNA.debug.xcconfig"; path = "Target Support Files/Pods-CRNA/Pods-CRNA.debug.xcconfig"; sourceTree = "<group>"; };
+		B8F92F43282BD83900EBBB24 /* StatsWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatsWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		B8F92F44282BD84100EBBB24 /* CRNA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CRNA.entitlements; sourceTree = "<group>"; };
 		CA9D7EFAC2878452DD89BE15 /* Pods_CRNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2D6E7D282A819B00B8952B /* CRNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2D6E89282A819D00B8952B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -630,6 +632,7 @@
 		DE2D6E74282A819B00B8952B = {
 			isa = PBXGroup;
 			children = (
+				B8F92F43282BD83900EBBB24 /* StatsWidgetsExtension.entitlements */,
 				DE2D6E7F282A819B00B8952B /* CRNA */,
 				DE2D6E9E282A81B500B8952B /* StatsWidgets */,
 				DE2D6E99282A81B500B8952B /* Frameworks */,
@@ -650,6 +653,7 @@
 		DE2D6E7F282A819B00B8952B /* CRNA */ = {
 			isa = PBXGroup;
 			children = (
+				B8F92F44282BD84100EBBB24 /* CRNA.entitlements */,
 				DE2D6EBC282A835A00B8952B /* Classes */,
 				DE2D6EAB282A825C00B8952B /* Resource */,
 			);
@@ -2335,9 +2339,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = CRNA/CRNA.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CRNA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2351,8 +2357,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.CRNA;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.crna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "CRNA AppStore";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CRNA/Resource/CRNA-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2367,9 +2374,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = CRNA/CRNA.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CRNA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2383,8 +2392,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.CRNA;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.crna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "CRNA AppStore";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "CRNA/Resource/CRNA-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2397,9 +2407,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = StatsWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StatsWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StatsWidgets;
@@ -2411,8 +2423,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.CRNA.StatsWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.crna.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "CRNA Widget AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -2425,9 +2438,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = StatsWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StatsWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StatsWidgets;
@@ -2439,8 +2454,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.CRNA.StatsWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.crna.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "CRNA Widget AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
